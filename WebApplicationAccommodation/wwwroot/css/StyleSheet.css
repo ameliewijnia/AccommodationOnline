@@ -1,0 +1,13 @@
+﻿.btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    float: left;
+}
+
+.space {
+    margin-left: 20px;
+}
+
+.space2 {
+    margin-left: -12px;
+}
