@@ -1,5 +1,62 @@
-﻿@*
+﻿@model PriceViewModel
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+
+<h1>Luxury Accommodation</h1>
+
+
+<div class="row">
+
+	<div class="col-12">
+
+		<div class="card">
+			<div class="card-header">
+				<h5>Create a Booking</h5>
+			</div>
+
+			<div class="card-body">
+				<form asp-controller="Second" asp-action="CreatePrice" method="post">
+					<div class="mb-3"> 
+						<label class="form-label">Full Name</label>
+						<input asp-for=Name type="text" class="form-control" />
+					</div>
+
+					<div class="mb-3"> 
+						<label class="form-label">Phone Number</label>
+						<input asp-for=Name type="text" class="form-control" />
+					</div>
+
+					<div class="mb-3"> 
+						<label class="form-label">Email Address</label>
+						<input asp-for=Name type="text" class="form-control" />
+					</div>
+
+					<div> 
+						<label class="form-label">Payment Options</label>
+						<input type="number" class="form-control"/>
+					</div>
+
+					<div> 
+						<label class="form-label">Number of Guests</label>
+						<input type="number" class="form-control"/>
+					</div>
+
+					<div class="mb-3">
+						<button type="submit" class="btn btn-primary">Submit Form</button>
+					</div>
+				</form>
+			</div>	
+
+			<div class="card-footer">
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
