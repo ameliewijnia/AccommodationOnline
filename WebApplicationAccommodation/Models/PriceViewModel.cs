@@ -2,5 +2,6 @@
 {
     public class PriceViewModel
     {
+        public string Name { get; set; }
     }
 }

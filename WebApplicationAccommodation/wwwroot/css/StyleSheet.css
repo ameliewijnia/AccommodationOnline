@@ -1,2 +1,262 @@
-﻿body {
+
+
+﻿ul {
+    list-style-type: none;
 }
+
+/* Month header */
+.month {
+    padding: 10px 25px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+}
+
+    /* Month list */
+    .month ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .month ul li {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+    /* Previous button inside month header */
+    .month .prev {
+        float: left;
+        padding-top: 2px;
+    }
+
+    /* Next button */
+    .month .next {
+        float: right;
+        padding-top: 2px;
+    }
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 5px 0;
+    background-color: #ddd;
+}
+
+    .weekdays li {
+        display: inline-block;
+        width: 13.6%;
+        color: #666;
+        text-align: center;
+    }
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+    .days li {
+        list-style-type: none;
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #777;
+    }
+
+        /* Highlight the "current" day */
+        .days li .active {
+            padding: 5px;
+            background: #1abc9c;
+            color: white !important
+        }
+
+.Hotel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+    .Hotel img {
+        width: 100px;
+        height: 200px;
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+        border-radius: 25px;
+        padding: 1px;
+        width: 80px;
+        height: 120px;
+    }
+
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+
+    25% {
+        transform: translate(5%, 15%) rotate(360deg);
+    }
+
+    50% {
+        transform: translate(10%, 5%) rotate(360deg);
+    }
+
+    75% {
+        transform: translate(0%, 15%) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.column3 {
+    float: right;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+.nav-item {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.navbar {
+    background-color: darksalmon;
+    padding: 0px;
+}
+
+.carousel-item img {
+    width: 500px;
+    height: 500px;
+}
+
+#calendar {
+    width: 100px;
+    height: 300px;
+    font-style: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+    #calendar table {
+        width: 100%;
+        height: 100%;
+    }
+
+    #calendar th, td {
+        text-align: center;
+        padding: 5px;
+        /*border: 0.5px solid black;*/
+    }
+
+    #calendar th {
+        background-color: darkolivegreen;
+    }
+
+    #calendar th {
+        cursor: pointer;
+    }
+
+    #calendar td:hover {
+        background-color: darkslateblue;
+    }
+
+    #calendar .selected {
+        background-color: blueviolet;
+        color: aquamarine;
+    }
+
+    #calendar .booked {
+        background-color: darkorange;
+        color: cadetblue;
+        cursor: default;
+    }
+
+.price {
+    float: left;
+}
+
+
+
+.btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    float: left;
+}
+
+.space {
+    margin-left: 20px;
+}
+
+.space2 {
+    margin-left: -12px;
+}
+
+.gallery img {
+    max-width: 100%;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.gallery {
+    padding: 80px 0;
+}
+
+#gallery-modal .modal-img {
+    width: 100%;
+}
+
+.gall-img {
+    height: 100px;
+    width: 100px;
+}
+
+.modal-body {
+    height: 550px;
+    width: 2000px;
+}
+
+    .modal-body img {
+        height: 500px;
+        width: 450px;
+    }
