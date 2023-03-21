@@ -1,35 +1,17 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - accommodationonline
+name: Build and deploy ASP.Net Core app to Azure Web App - stagingtestaccommodation
 
 on:
   push:
     branches:
-      - main
+      - stagingTest
   workflow_dispatch:
 
 jobs:
-  run-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          # Full git history is needed to get a proper list of changed files within `super-linter`
-          fetch-depth: 0
-
-      - name: Lint Code Base
-        uses: github/super-linter@v4
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: "main"
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_YAML: false
-          
   build:
     runs-on: windows-latest
-    needs: run-lint
 
     steps:
       - uses: actions/checkout@v2
@@ -69,7 +51,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'accommodationonline'
+          app-name: 'stagingtestaccommodation'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_38A910B9794B4E95AEEC67E32B17919E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E1CA68E9CB264519B6DD7D82489C616E }}
           package: .
