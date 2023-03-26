@@ -8,5 +8,6 @@ namespace WebApplicationAccommodation.Controllers
         {
             return View();
         }
+
     }
 }
